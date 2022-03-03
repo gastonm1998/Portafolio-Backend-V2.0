@@ -9,23 +9,30 @@ import java.util.Date;
 
 public class ExperienciaModel {
 
+    /*Identificador principal de la tabla*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true , nullable = false)
     private Long id;
 
+    /*columna nombre empresa*/
     private String nombreEmpresa;
 
+    /*columna fecha de inicio */
     @Temporal(TemporalType.DATE)
     private Date fechaInicio;
 
+    /*columna fecha de finalizacion*/
     @Temporal(TemporalType.DATE)
     private Date FechaFin;
 
+    /*columna que guarda el codigo del color hexadecimal*/
     private String color;
 
+    /*columna que guarda la descripcion del trabajo realizado*/
     private String descripcion;
 
+    /*Getters and Setters*/
     public Long getId() {
         return id;
     }

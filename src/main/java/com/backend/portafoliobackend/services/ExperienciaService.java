@@ -41,7 +41,7 @@ public class ExperienciaService {
         }
     }
 
-    /* metodo para guardar en la base de datos la tabla experiencia */
+    /* metodo para editar en la base de datos la tabla experiencia */
 
     public ExperienciaModel actualizarExperiencia( ExperienciaModel experiencia){
         return experienciaRepository.save(experiencia );
