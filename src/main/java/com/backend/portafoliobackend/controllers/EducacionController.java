@@ -43,4 +43,14 @@ public class EducacionController {
     public  EducacionModel actualizarEducacion(@RequestBody EducacionModel educacion){
         return this.educacionService.guardarEducacion(educacion);
     }
+    /*Metodo delete por id*/
+    @DeleteMapping(path = "/{id}")
+    public String eliminarEducacion( @PathVariable("id") Long id){
+        boolean ok = this.educacionService.eliminarEducacion(id);
+        if (ok){
+            return  "Eliminado correctamente";
+        }else{
+            return "error al eliminar";
+        }
+    }
 }
