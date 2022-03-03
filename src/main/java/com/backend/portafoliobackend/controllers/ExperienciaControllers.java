@@ -49,7 +49,7 @@ public class ExperienciaControllers {
         }
     }
 
-    /* metodo post*/
+    /* metodo put*/
     @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping
     public ExperienciaModel actualizarExperiencia(@RequestBody ExperienciaModel experiencia){
