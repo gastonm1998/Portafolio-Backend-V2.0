@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
-@Controller
+@RestController
 @RequestMapping("/bannerPrincipal")
 public class AboutMeBannerPrincipalController {
 
@@ -21,7 +21,7 @@ public class AboutMeBannerPrincipalController {
     public ArrayList<AboutMeBannerPrincipalModel> obtenerBannerPrincipal(){
         return aboutMeBannerPrincipalService.obtenerBannerPrincipal();
     }
-    
+
     @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping
     public AboutMeBannerPrincipalModel actualizarBannerPrincipal(@RequestBody AboutMeBannerPrincipalModel bannerPrincipal){
