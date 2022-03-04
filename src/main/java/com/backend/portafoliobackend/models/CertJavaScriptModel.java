@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.*;
 import java.util.Date;
 
-@Repository
+@Entity
 @Table(name = "certificadoJavaScript")
 public class CertJavaScriptModel {
 
