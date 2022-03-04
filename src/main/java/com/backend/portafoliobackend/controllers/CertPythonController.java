@@ -56,4 +56,5 @@ public class CertPythonController {
     public CertPythonModel actualizarPython(@RequestBody CertPythonModel python){
         return this.certPythonService.actualizarPython(python);
     }
+    
 }
