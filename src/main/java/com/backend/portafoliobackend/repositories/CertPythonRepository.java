@@ -1,9 +1,9 @@
 package com.backend.portafoliobackend.repositories;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import com.backend.portafoliobackend.models.CertPythonModel;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-@Entity
-@Table(name = "certificadoPython")
-public class CertPythonRepository {
+@Repository
+public interface CertPythonRepository extends CrudRepository<CertPythonModel,Long> {
 }
