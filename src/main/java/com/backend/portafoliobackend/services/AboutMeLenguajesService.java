@@ -1,8 +1,6 @@
 package com.backend.portafoliobackend.services;
 
 import com.backend.portafoliobackend.models.AboutMeLenguajesModel;
-import com.backend.portafoliobackend.models.AboutMeSoftSkillsModel;
-import com.backend.portafoliobackend.models.ExperienciaModel;
 import com.backend.portafoliobackend.repositories.AboutMeLenguajesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

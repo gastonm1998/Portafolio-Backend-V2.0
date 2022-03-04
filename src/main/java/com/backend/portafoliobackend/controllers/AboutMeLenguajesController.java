@@ -1,7 +1,6 @@
 package com.backend.portafoliobackend.controllers;
 
 import com.backend.portafoliobackend.models.AboutMeLenguajesModel;
-import com.backend.portafoliobackend.models.ExperienciaModel;
 import com.backend.portafoliobackend.services.AboutMeLenguajesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -58,4 +57,5 @@ public class AboutMeLenguajesController {
     public AboutMeLenguajesModel actualizarLenguajes(@RequestBody AboutMeLenguajesModel lenguajes){
         return this.aboutMeLenguajesService.actualizarLenguajes(lenguajes);
     }
+    
 }
