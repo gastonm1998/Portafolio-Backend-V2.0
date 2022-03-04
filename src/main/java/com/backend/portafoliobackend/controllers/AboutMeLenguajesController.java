@@ -57,5 +57,5 @@ public class AboutMeLenguajesController {
     public AboutMeLenguajesModel actualizarLenguajes(@RequestBody AboutMeLenguajesModel lenguajes){
         return this.aboutMeLenguajesService.actualizarLenguajes(lenguajes);
     }
-    
+
 }
