@@ -43,4 +43,5 @@ public class AboutMeSoftSkillsModel {
     public void setPocentaje(int pocentaje) {
         this.pocentaje = pocentaje;
     }
+    
 }
