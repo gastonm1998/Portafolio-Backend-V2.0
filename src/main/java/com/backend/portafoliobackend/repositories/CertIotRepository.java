@@ -1,4 +1,9 @@
 package com.backend.portafoliobackend.repositories;
 
-public interface CertIotRepository {
+import com.backend.portafoliobackend.models.CertIotModel;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CertIotRepository extends CrudRepository<CertIotModel, Long> {
 }
