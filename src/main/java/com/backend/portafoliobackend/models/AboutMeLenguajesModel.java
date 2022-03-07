@@ -17,6 +17,12 @@ public class AboutMeLenguajesModel {
     /* columna porcentaje de dominio*/
     private String dominio;
 
+    /*color de barra */
+    private  String colorBarra;
+
+    /*color de fondo*/
+    private String colorFondo;
+
     /*getters and setters*/
 
     public Long getId() {
@@ -41,5 +47,21 @@ public class AboutMeLenguajesModel {
 
     public void setDominio(String dominio) {
         this.dominio = dominio;
+    }
+
+    public String getColorBarra() {
+        return colorBarra;
+    }
+
+    public void setColorBarra(String colorBarra) {
+        this.colorBarra = colorBarra;
+    }
+
+    public String getColorFondo() {
+        return colorFondo;
+    }
+
+    public void setColorFondo(String colorFondo) {
+        this.colorFondo = colorFondo;
     }
 }
