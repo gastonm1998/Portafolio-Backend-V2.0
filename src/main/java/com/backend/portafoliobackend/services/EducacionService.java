@@ -1,8 +1,5 @@
 package com.backend.portafoliobackend.services;
-
-
 import com.backend.portafoliobackend.models.EducacionModel;
-import com.backend.portafoliobackend.models.ExperienciaModel;
 import com.backend.portafoliobackend.repositories.EducacionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

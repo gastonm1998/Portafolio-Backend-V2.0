@@ -16,7 +16,7 @@ public class AboutMeSoftSkillsModel {
     private String softSkill;
 
     /*columna de porcentaje*/
-    private  int pocentaje;
+    private  Long pocentaje;
 
     /*getters and setters*/
 
@@ -36,11 +36,11 @@ public class AboutMeSoftSkillsModel {
         this.softSkill = softSkill;
     }
 
-    public int getPocentaje() {
+    public Long getPocentaje() {
         return pocentaje;
     }
 
-    public void setPocentaje(int pocentaje) {
+    public void setPocentaje(Long pocentaje) {
         this.pocentaje = pocentaje;
     }
 }

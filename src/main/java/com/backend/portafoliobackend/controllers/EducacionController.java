@@ -1,6 +1,4 @@
 package com.backend.portafoliobackend.controllers;
-
-
 import com.backend.portafoliobackend.models.EducacionModel;
 import com.backend.portafoliobackend.services.EducacionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +42,7 @@ public class EducacionController {
         return this.educacionService.guardarEducacion(educacion);
     }
     /*Metodo delete por id*/
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping(path = "/{id}")
     public String eliminarEducacion( @PathVariable("id") Long id){
         boolean ok = this.educacionService.eliminarEducacion(id);

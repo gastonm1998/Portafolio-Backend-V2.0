@@ -1,12 +1,11 @@
 package com.backend.portafoliobackend.models;
+
 import javax.persistence.*;
 import java.util.Date;
 
-/*anotacion y nombre de la tabla*/
 @Entity
-@Table(name = "tablaEducacion")
-
-public class EducacionModel {
+@Table(name = "educacion")
+public class CertEducacionModel {
 
     /*Identificador principal de la tabla*/
     @Id
@@ -14,14 +13,14 @@ public class EducacionModel {
     @Column(unique = true , nullable = false)
     private Long id;
 
-    /*columna nombre institucion educativa*/
-    private String nombreInstitucionEducativa;
+    /*columna nombre empresa*/
+    private String educacion;
 
-    /*columna fecha de inicio*/
+    /*columna fecha de inicio */
     @Temporal(TemporalType.DATE)
     private Date fechaInicio;
 
-    /*columna fecha de fin*/
+    /*columna fecha de finalizacion*/
     @Temporal(TemporalType.DATE)
     private Date FechaFin;
 
@@ -31,8 +30,7 @@ public class EducacionModel {
     /*columna que guarda la descripcion del trabajo realizado*/
     private String descripcion;
 
-
-    /*Getters and Setters*/
+    /*getters and setters*/
 
     public Long getId() {
         return id;
@@ -42,12 +40,12 @@ public class EducacionModel {
         this.id = id;
     }
 
-    public String getNombreInstitucionEducativa() {
-        return nombreInstitucionEducativa;
+    public String getEducacion() {
+        return educacion;
     }
 
-    public void setNombreInstitucionEducativa(String nombreInstitucionEducativa) {
-        this.nombreInstitucionEducativa = nombreInstitucionEducativa;
+    public void setEducacion(String educacion) {
+        this.educacion = educacion;
     }
 
     public Date getFechaInicio() {
