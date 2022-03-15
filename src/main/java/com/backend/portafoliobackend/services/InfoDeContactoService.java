@@ -1,8 +1,9 @@
 package com.backend.portafoliobackend.services;
 
-import com.backend.portafoliobackend.models.CertJavaScriptModel;
+
 import com.backend.portafoliobackend.models.InfoDeContactoModel;
 import com.backend.portafoliobackend.repositories.InfoDeContactoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.Optional;
 public class InfoDeContactoService {
 
     /*inyeccion de dependencia*/
+    @Autowired
     InfoDeContactoRepository infoDeContactoRepository;
 
     /* metodo para obtener todos los datos del la tabla de  Contacto*/
