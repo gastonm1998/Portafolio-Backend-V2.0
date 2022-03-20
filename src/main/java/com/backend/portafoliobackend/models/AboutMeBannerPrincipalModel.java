@@ -1,5 +1,7 @@
 package com.backend.portafoliobackend.models;
 
+import sun.security.util.Length;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,7 +20,7 @@ public class AboutMeBannerPrincipalModel {
 
     /* Ubicacion de la imagen para el banner principal */
     private String banner;
-
+    @Column(length = 4000)
     /* Descripcion del creador del portafolio */
     private String descripcion;
 
