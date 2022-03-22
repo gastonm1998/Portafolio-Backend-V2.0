@@ -17,7 +17,7 @@ public class CertComplementosController {
     CertComplementosService certComplementosService;
 
     /*metodo get all*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping()
     public ArrayList<CertComplementosModel> obtenerComplementos(){
 
@@ -25,21 +25,21 @@ public class CertComplementosController {
     }
 
     /* metodo post*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PostMapping
     public CertComplementosModel guardarComplementos(@RequestBody CertComplementosModel complementos){
         return this.certComplementosService.guardarComplementos(complementos);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping(path = "/{id}")
     public Optional<CertComplementosModel> obtenerComplementosPorID(@PathVariable("id") Long id){
         return this.certComplementosService.obtenerComplementosPorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @DeleteMapping(path = "/{id}")
     public String eliminarComplementos( @PathVariable("id") Long id){
         boolean ok = this.certComplementosService.eliminarComplementos(id);
@@ -51,7 +51,7 @@ public class CertComplementosController {
     }
 
     /* metodo put*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PutMapping
     public CertComplementosModel actualizarComplementos(@RequestBody CertComplementosModel complementos){
         return this.certComplementosService.actualizarComplementos(complementos);

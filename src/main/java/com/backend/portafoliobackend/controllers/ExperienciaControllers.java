@@ -16,28 +16,28 @@ public class ExperienciaControllers {
     ExperienciaService experienciaService;
 
     /*metodo get all*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping()
     public ArrayList<ExperienciaModel> obtenerExperiencia(){
         return experienciaService.obtenerExperiencia();
     }
 
     /* metodo post*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PostMapping
     public ExperienciaModel guardarExperiencia(@RequestBody ExperienciaModel experiencia){
         return this.experienciaService.guardarExperiencia(experiencia);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping(path = "/{id}")
     public Optional<ExperienciaModel> obtenerExperienciaPorID( @PathVariable("id") Long id){
         return this.experienciaService.obtenerExperienciaPorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @DeleteMapping(path = "/{id}")
     public String eliminarExperiencia( @PathVariable("id") Long id){
         boolean ok = this.experienciaService.eliminarExperiencia(id);
@@ -49,7 +49,7 @@ public class ExperienciaControllers {
     }
 
     /* metodo put*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PutMapping
     public ExperienciaModel actualizarExperiencia(@RequestBody ExperienciaModel experiencia){
         return this.experienciaService.guardarExperiencia(experiencia);

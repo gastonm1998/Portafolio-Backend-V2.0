@@ -18,7 +18,7 @@ public class CertHtmlCssController {
     CertHtmlCssService certHtmlCssService;
 
     /*metodo get all*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping()
     public ArrayList<CertHtmlCssModel> obtenerCssHtml(){
 
@@ -26,21 +26,21 @@ public class CertHtmlCssController {
     }
 
     /* metodo post*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PostMapping
     public CertHtmlCssModel guardarCssHtml(@RequestBody CertHtmlCssModel cssHtml){
         return this.certHtmlCssService.guardarCssHtml(cssHtml);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping(path = "/{id}")
     public Optional<CertHtmlCssModel> obtenerCssHtmlPorID(@PathVariable("id") Long id){
         return this.certHtmlCssService.obtenerCssHtmlPorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @DeleteMapping(path = "/{id}")
     public String eliminarCssHtml( @PathVariable("id") Long id){
         boolean ok = this.certHtmlCssService.eliminarCssHtml(id);
@@ -52,7 +52,7 @@ public class CertHtmlCssController {
     }
 
     /* metodo put*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PutMapping
     public CertHtmlCssModel actualizarCssHtml(@RequestBody CertHtmlCssModel cssHtml){
         return this.certHtmlCssService.actualizarCssHtml(cssHtml);

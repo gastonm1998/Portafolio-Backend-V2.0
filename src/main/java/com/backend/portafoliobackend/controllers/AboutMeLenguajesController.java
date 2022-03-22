@@ -17,7 +17,7 @@ public class AboutMeLenguajesController {
     AboutMeLenguajesService aboutMeLenguajesService;
 
     /*metodo get all*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping()
     public ArrayList<AboutMeLenguajesModel> obtenerLenguaje()
     {
@@ -26,21 +26,21 @@ public class AboutMeLenguajesController {
     }
 
     /* metodo post*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PostMapping
     public AboutMeLenguajesModel guardarLenguaje(@RequestBody AboutMeLenguajesModel lenguaje){
         return this.aboutMeLenguajesService.guardarLenguajes(lenguaje);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping(path = "/{id}")
     public Optional<AboutMeLenguajesModel> obtenerLenguajesPorID(@PathVariable("id") Long id){
         return this.aboutMeLenguajesService.obtenerLenguajesPorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @DeleteMapping(path = "/{id}")
     public String eliminarLenguaje( @PathVariable("id") Long id){
         boolean ok = this.aboutMeLenguajesService.eliminarLenguaje(id);
@@ -52,7 +52,7 @@ public class AboutMeLenguajesController {
     }
 
     /* metodo put*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PutMapping
     public AboutMeLenguajesModel actualizarLenguajes(@RequestBody AboutMeLenguajesModel lenguajes){
         return this.aboutMeLenguajesService.actualizarLenguajes(lenguajes);
