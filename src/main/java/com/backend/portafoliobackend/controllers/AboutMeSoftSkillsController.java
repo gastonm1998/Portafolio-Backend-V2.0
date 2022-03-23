@@ -18,28 +18,28 @@ public class AboutMeSoftSkillsController {
     AboutMeSoftSkillsService aboutMeSoftSkillsService;
 
     /*metodo get all */
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping()
     public ArrayList<AboutMeSoftSkillsModel> obtenerSoftSkills(){
         return aboutMeSoftSkillsService.obtenerSoftSkills();
     }
 
     /*metodo post*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public AboutMeSoftSkillsModel guardarSoftSkills(@RequestBody AboutMeSoftSkillsModel softSkills){
         return this.aboutMeSoftSkillsService.guardarSoftSkills(softSkills);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping(path = "/{id}")
     public Optional<AboutMeSoftSkillsModel> obtenerSoftSkillsPorID(@PathVariable("id") Long id){
         return this.aboutMeSoftSkillsService.obtenerSoftSkillsPorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping(path = "/{id}")
     public String eliminarSoftSkills( @PathVariable("id") Long id){
         boolean ok = this.aboutMeSoftSkillsService.eliminarSoftSkills(id);
@@ -52,7 +52,7 @@ public class AboutMeSoftSkillsController {
 
     /* metodo put*/
 
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping
     public AboutMeSoftSkillsModel actualizarSoftSkill(@RequestBody AboutMeSoftSkillsModel softSkill){
         return this.aboutMeSoftSkillsService.actualizarSoftSkill(softSkill);

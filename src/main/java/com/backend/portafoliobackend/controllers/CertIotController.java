@@ -18,7 +18,7 @@ public class CertIotController {
     CertIotService certIotService;
 
     /*metodo get all*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping()
     public ArrayList<CertIotModel> obtenerIot(){
 
@@ -26,21 +26,21 @@ public class CertIotController {
     }
 
     /* metodo post*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public CertIotModel guardarIot(@RequestBody CertIotModel iot){
         return this.certIotService.guardarIot(iot);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping(path = "/{id}")
     public Optional<CertIotModel> obtenerIotPorID(@PathVariable("id") Long id){
         return this.certIotService.obtenerIotPorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping(path = "/{id}")
     public String eliminarIot( @PathVariable("id") Long id){
         boolean ok = this.certIotService.eliminarIot(id);
@@ -52,7 +52,7 @@ public class CertIotController {
     }
 
     /* metodo put*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping
     public CertIotModel actualizarIot(@RequestBody CertIotModel iot){
         return this.certIotService.guardarIot(iot);

@@ -16,13 +16,13 @@ public class AboutMeBannerPrincipalController {
     @Autowired
     AboutMeBannerPrincipalService aboutMeBannerPrincipalService;
 
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping
     public ArrayList<AboutMeBannerPrincipalModel> obtenerBannerPrincipal(){
         return aboutMeBannerPrincipalService.obtenerBannerPrincipal();
     }
 
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping
     public AboutMeBannerPrincipalModel actualizarBannerPrincipal(@RequestBody AboutMeBannerPrincipalModel bannerPrincipal){
         return this.aboutMeBannerPrincipalService.actualizarBannerPrincipal(bannerPrincipal);

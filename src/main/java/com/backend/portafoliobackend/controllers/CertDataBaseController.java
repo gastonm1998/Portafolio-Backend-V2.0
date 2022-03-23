@@ -18,7 +18,7 @@ public class CertDataBaseController {
     CertDataBaseService certDataBaseService;
 
     /*metodo get all*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping()
     public ArrayList<CertDataBaseModel> obtenerDataBase(){
 
@@ -26,21 +26,21 @@ public class CertDataBaseController {
     }
 
     /* metodo post*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public CertDataBaseModel guardarDataBase(@RequestBody CertDataBaseModel dataBase){
         return this.certDataBaseService.guardarDataBase(dataBase);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping(path = "/{id}")
     public Optional<CertDataBaseModel> obtenerDataBasePorID(@PathVariable("id") Long id){
         return this.certDataBaseService.obtenerDataBasePorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping(path = "/{id}")
     public String eliminarDataBase( @PathVariable("id") Long id){
         boolean ok = this.certDataBaseService.eliminarDataBase(id);
@@ -52,7 +52,7 @@ public class CertDataBaseController {
     }
 
     /* metodo put*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping
     public CertDataBaseModel actualizarDataBase(@RequestBody CertDataBaseModel dataBase){
         return this.certDataBaseService.actualizarDataBase(dataBase);

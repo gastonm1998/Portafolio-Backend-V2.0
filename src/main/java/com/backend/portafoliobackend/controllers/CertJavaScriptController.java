@@ -18,7 +18,7 @@ public class CertJavaScriptController {
     CertJavaScriptService certJavaScriptService;
 
     /*metodo get all*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping()
     public ArrayList<CertJavaScriptModel> obtenerJavaScript(){
 
@@ -26,21 +26,21 @@ public class CertJavaScriptController {
     }
 
     /* metodo post*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public CertJavaScriptModel guardarJavaScript(@RequestBody CertJavaScriptModel javaScript){
         return this.certJavaScriptService.guardarJavaScript(javaScript);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping(path = "/{id}")
     public Optional<CertJavaScriptModel> obtenerJavaScriptPorID(@PathVariable("id") Long id){
         return this.certJavaScriptService.obtenerJavaScriptPorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping(path = "/{id}")
     public String eliminarJavaScript( @PathVariable("id") Long id){
         boolean ok = this.certJavaScriptService.eliminarJavaScript(id);
@@ -52,7 +52,7 @@ public class CertJavaScriptController {
     }
 
     /* metodo put*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping
     public CertJavaScriptModel actualizarJavaScript(@RequestBody CertJavaScriptModel javaScript){
         return this.certJavaScriptService.actualizarJavaScript(javaScript);
