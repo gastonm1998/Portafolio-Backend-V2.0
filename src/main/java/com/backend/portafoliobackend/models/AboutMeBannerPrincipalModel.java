@@ -1,7 +1,5 @@
 package com.backend.portafoliobackend.models;
 
-import sun.security.util.Length;
-
 import javax.persistence.*;
 
 @Entity
