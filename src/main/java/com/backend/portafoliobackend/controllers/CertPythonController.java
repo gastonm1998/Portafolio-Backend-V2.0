@@ -19,7 +19,7 @@ public class CertPythonController {
     CertPythonService certPythonService;
 
     /*metodo get all*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping()
     public ArrayList<CertPythonModel> obtenerPython(){
 
@@ -27,21 +27,21 @@ public class CertPythonController {
     }
 
     /* metodo post*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PostMapping
     public CertPythonModel guardarPython(@RequestBody CertPythonModel python){
         return this.certPythonService.guardarPython(python);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping(path = "/{id}")
     public Optional<CertPythonModel> obtenerPythonPorID(@PathVariable("id") Long id){
         return this.certPythonService.obtenerPythonPorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @DeleteMapping(path = "/{id}")
     public String eliminarPython( @PathVariable("id") Long id){
         boolean ok = this.certPythonService.eliminarPython(id);
@@ -53,7 +53,7 @@ public class CertPythonController {
     }
 
     /* metodo put*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PutMapping
     public CertPythonModel actualizarPython(@RequestBody CertPythonModel python){
         return this.certPythonService.actualizarPython(python);

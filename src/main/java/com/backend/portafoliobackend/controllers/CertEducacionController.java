@@ -18,7 +18,7 @@ public class CertEducacionController {
     CertEducacionService certEducacionService;
 
     /*metodo get all*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping()
     public ArrayList<CertEducacionModel> obtenerEducacion(){
 
@@ -26,21 +26,21 @@ public class CertEducacionController {
     }
 
     /* metodo post*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PostMapping
     public CertEducacionModel guardarCertEducacion(@RequestBody CertEducacionModel educacion){
         return this.certEducacionService.guardarCertEducacion(educacion);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping(path = "/{id}")
     public Optional<CertEducacionModel> obtenerCertEducacionPorID(@PathVariable("id") Long id){
         return this.certEducacionService.obtenerCertEducacionPorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @DeleteMapping(path = "/{id}")
     public String eliminarCertEducacion( @PathVariable("id") Long id){
         boolean ok = this.certEducacionService.eliminarCertEducacion(id);
@@ -52,7 +52,7 @@ public class CertEducacionController {
     }
 
     /* metodo put*/
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @PutMapping
     public CertEducacionModel actualizarCertEducacion(@RequestBody CertEducacionModel educacion){
         return this.certEducacionService.actualizarEducacion(educacion);
