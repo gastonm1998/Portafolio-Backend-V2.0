@@ -15,7 +15,8 @@ public class AboutMeBannerPrincipalController {
     /*Inyeccion de dependencia desde el service*/
     @Autowired
     AboutMeBannerPrincipalService aboutMeBannerPrincipalService;
-
+    /*@CrossOrigin(origins = "http://localhost:4200/")*/
+    /*@CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")*/
     @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
     @GetMapping
     public ArrayList<AboutMeBannerPrincipalModel> obtenerBannerPrincipal(){
