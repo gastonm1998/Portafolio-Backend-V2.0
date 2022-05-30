@@ -17,7 +17,7 @@ public class InfoDeContactoController {
     InfoDeContactoService infoDeContactoService;
 
     /*metodo get all*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "https://portafolio-gaston-monasterio.web.app")
     @GetMapping()
     public ArrayList<InfoDeContactoModel> obtenerContacto(){
 
@@ -25,21 +25,21 @@ public class InfoDeContactoController {
     }
 
     /* metodo post*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "https://portafolio-gaston-monasterio.web.app")
     @PostMapping
     public InfoDeContactoModel guardarContacto(@RequestBody InfoDeContactoModel contacto){
         return this.infoDeContactoService.guardarContacto(contacto);
     }
 
     /*Metodo get por id*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "https://portafolio-gaston-monasterio.web.app")
     @GetMapping(path = "/{id}")
     public Optional<InfoDeContactoModel> obtenerContactoPorID(@PathVariable("id") Long id){
         return this.infoDeContactoService.obtenerContactoPorID(id);
     }
 
     /*metodo eliminar por id*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "https://portafolio-gaston-monasterio.web.app")
     @DeleteMapping(path = "/{id}")
     public String eliminarContacto( @PathVariable("id") Long id){
         boolean ok = this.infoDeContactoService.eliminarContacto(id);
@@ -51,7 +51,7 @@ public class InfoDeContactoController {
     }
 
     /* metodo put*/
-    @CrossOrigin(origins = "https://portafolio-gaston-m-frontend.herokuapp.com/")
+    @CrossOrigin(origins = "https://portafolio-gaston-monasterio.web.app")
     @PutMapping
     public InfoDeContactoModel actualizarContacto(@RequestBody InfoDeContactoModel contacto){
         return this.infoDeContactoService.actualizarContacto(contacto);
