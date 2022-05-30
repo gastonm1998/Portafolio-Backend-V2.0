@@ -70,7 +70,7 @@ La misma nos trae los datos de la base de datos para editar. Seleccionamos el í
 
 [![](https://raw.githubusercontent.com/gastonm1998/Portafolio-v2.0-backend-springboot/despliegue/src/main/java/com/backend/portafoliobackend/assets/f14.png)](https://raw.githubusercontent.com/gastonm1998/Portafolio-v2.0-backend-springboot/despliegue/src/main/java/com/backend/portafoliobackend/assets/f14.png)
 
-###Cerrar sesión 
+###   Cerrar sesión
 
 - Una vez finalizado todos los cambios que el usuario haya realizado se procederá a salir del modo editor con el botón de cerrar sesión.
 
@@ -90,11 +90,11 @@ La misma nos trae los datos de la base de datos para editar. Seleccionamos el í
 
 - Los models contienen la forma en como los datos serán almacenados en la base de datos
 
-####Repository
+####  Repository
 
 - El repository en una interface que heredará las clases de CRUDrepository y nos dará las funciones de leer editar agregar y eliminar
 
-####Service
+####  Service
 
 - En service haremos una inyección de dependencia del repository e implementaremos los métodos que necesitemos
 
